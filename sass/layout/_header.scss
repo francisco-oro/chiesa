@@ -1,0 +1,51 @@
+﻿.header {
+    height: 95vh;
+    position: relative;
+    padding: 0;
+
+    &__slider--1 {
+        @include slider-style;
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-1.jpg);
+        animation: fade1 10s infinite;
+    }
+
+    &__slider--2 {
+        @include slider-style;
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-2.jpg);
+        animation: fade2 10s infinite;
+    }
+
+    &__slider--3 {
+        @include slider-style;
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-3.jpg);
+        animation: fade3 10s infinite;
+    }
+
+    &__slider--4 {
+        @include slider-style;
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-4.jpg);
+        animation: fade4 10s infinite;
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 25%;
+        @include center-object;
+    }
+
+    &__logo {
+        height: 29rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 60%;
+        @include center-object;
+    }
+
+    &__btn-box {
+        position: absolute;
+        top: 90%;
+        @include center-object;
+    }
+}

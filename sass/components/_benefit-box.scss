@@ -1,0 +1,92 @@
+﻿.benefit-box {
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    width: 28rem;
+    height: 40rem;
+    color: white;
+    position: relative;
+
+    &--1 {
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/benefit-img-1.jpg);
+        background-size: cover;
+        background-position: 78% 50%;
+    }
+
+    &--2 {
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/benefit-img-2.jpg);
+        background-size: cover;
+        background-position: 78% 50%;
+    }
+
+    &--3 {
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/benefit-img-3.jpg);
+        background-size: cover;
+        background-position: 78% 50%;
+    }
+
+    &--4 {
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/benefit-img-4.jpg);
+        background-size: cover;
+        background-position: 78% 50%;
+    }
+
+    &__title {
+        font-size: 4rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        @include center-object;
+        opacity: .7;
+        transition: opacity .2s; 
+    }
+
+
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28rem;
+        height: 40rem;
+        transition: background-image .2s; 
+    }
+
+    &:hover &__overlay {
+        background-image: linear-gradient(to right bottom, rgba($primary-light, .7), rgba($primary-dark, .7));
+    }
+
+    &:hover &__title {
+        opacity: 0;
+    }
+
+    &__content {
+        position: absolute;
+        top: 10%;
+        @include center-object;
+        width: 85%;
+        opacity: 0; 
+        transition: all .2s; 
+    }
+
+    &:hover &__content{
+        top: 50%; 
+        opacity: 1;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem; 
+        background-image: linear-gradient(to right bottom, white, $secondary-3-dark);
+        -webkit-background-clip: text; 
+        color: transparent; 
+    }
+
+    &__heading {
+        color: white; 
+    }
+
+    &__text {
+        font-size: 1.5rem;
+    }
+
+    @include clearfix;
+}

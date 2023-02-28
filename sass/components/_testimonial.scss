@@ -1,0 +1,26 @@
+﻿.testimonial {
+    width: 40%;
+    background-color: rgba(white, .6);
+    box-shadow: 0 3rem 6rem rgba($black, .1);
+    display: block;
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        clip-path: circle(90% at 3% 8%);
+    }
+
+    &__image {
+        height: 100%;
+    }
+
+    &__para {
+        font-size: 1.5rem;
+        color: $secondary-3-dark;
+    }
+
+    &__text{
+        padding: 3rem;
+    }
+}
