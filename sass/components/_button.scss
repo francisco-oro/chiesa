@@ -31,6 +31,10 @@
         color: $grey-light-1; 
         margin-right: 1rem; 
     }
+
+    @include respond(laptop) {
+        margin: 1rem; 
+    }
 }
 
 .btn-rectangular {
@@ -45,6 +49,7 @@
         transition: all .2s;
     }
 
+    &--white:hover,
     &:hover {
         background-color: $bittersweetshimmer;
         color: white;
@@ -52,8 +57,23 @@
         transform: translateY(-3px);
     }
 
+    &--white:active,
     &:active {
         transform: translateY(-1px);
         box-shadow: 0 .5rem 2rem rgba($black, .5);
     }
-}
+
+    &--white {
+        color: white;
+    }
+
+    &--white:link,
+    &--white:visited {
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    &--white:hover{
+        border-bottom: transparent; 
+    }
+} 

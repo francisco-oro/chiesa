@@ -13,4 +13,24 @@
 .testimonials-section{
     padding: 15rem 0;
     position: relative; 
+    height: 81rem;
+}
+
+.services-section {
+    padding: 15rem 0;
+    background-color: $grey-light-1; 
+    height: 80rem; 
+}
+
+.contact-section{
+    padding-top: 10rem; 
+    background-color: white;
+    height: 70rem; 
+}
+
+.footer-section {
+    background-color: $secondary-3-dark;
+    padding: 0;
+    height: 30rem; 
+    z-index: 4; 
 }

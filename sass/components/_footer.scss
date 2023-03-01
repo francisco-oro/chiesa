@@ -1,0 +1,34 @@
+﻿.footer {
+    &__para {
+        text-align: center;
+        font-size: 2rem;
+        padding-top: 3rem;
+    }
+
+    &__nav {
+        font-size: 1.5rem;
+        width: 30%; 
+        text-align: center; 
+        & li {
+            border-left: 3px solid white; 
+            list-style: none; 
+            padding: .5rem 0; 
+            left: 50%; 
+            & a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    &__icons {
+        padding-left: 2rem;
+        font-size: 3rem; 
+        & li {
+            list-style: none; 
+            & a {
+                color: white; 
+            }
+        }
+    }
+}

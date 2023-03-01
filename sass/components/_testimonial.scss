@@ -1,26 +1,66 @@
-﻿.testimonial {
+﻿.testimonial{
     width: 40%;
     background-color: rgba(white, .6);
     box-shadow: 0 3rem 6rem rgba($black, .1);
-    display: block;
-
+    display: inline-block;
+    border-radius: 2rem; 
+    overflow: hidden; 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
-        clip-path: circle(90% at 3% 8%);
+        -webkit-clip-path: circle(90% at 3% 8%);
+        -webkit-shape-outside: circle(100% at 3% 8%); 
+        position: relative; 
     }
 
     &__image {
         height: 100%;
+        transform:scale(1.7);
+        transition: all .5s; 
+    }
+
+    &:hover &__image {
+        transform: scale(1.4);
+        filter: blur(3px) brightness(80%);
     }
 
     &__para {
         font-size: 1.5rem;
         color: $secondary-3-dark;
     }
-
+        
     &__text{
         padding: 3rem;
     }
+
+    &__caption {
+        color: white;
+        position: absolute;
+        top: 50%;
+        @include center-object;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &:hover &__caption{
+        opacity: 1;
+        transform: translate(-60%, -80%);
+    }
+
+    &--1{
+        float: left;
+        margin-left: 5rem;  
+        margin-top: 5rem; 
+    }
+
+    &--2 {
+        float: right;
+        margin-top: 20rem; 
+        margin-right: 5rem; 
+    }
+
+    @include clearfix;
 }

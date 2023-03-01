@@ -1,0 +1,100 @@
+﻿.form {
+    &__input {
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        background-color: rgba(white, .7);
+        border: none;
+        width: 40%;
+        border-radius: 2px;
+        color: black;
+        font-weight: 400;
+        font-family: inherit;
+        opacity: 1;
+        border-bottom: 3px solid transparent;
+
+        &:focus {
+            box-shadow: 0 1rem 2rem, rgba($black, .1);
+            border-bottom: 3px solid $grey-dark;
+        }
+
+        &:invalid {
+            border-bottom: 3px solid $secondary-3;
+        }
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+    &__label {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: .7rem;
+        color: white;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__group {
+        margin-bottom: 3rem;
+    }
+
+    &__radio-group {
+        display: inline-block;
+        width: 13%;
+    }
+
+    &__radio-input:checked + &__radio-label &__radio-button:after {
+        opacity: 1;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+
+    &__radio-label {
+        font-size: $default-font-size;
+        color: white;
+        display: inline-block;
+        cursor: pointer;
+        padding-left: 5rem;
+        position: relative;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-image: url(img/golden-frame-texture-small.jpg);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &:after {
+            content: "";
+            display: block;
+            height: 1.3rem;
+            width: 1.3rem;
+            border-radius: 50%;
+            background-color: $secondary-light;
+            position: absolute;
+            top: 50%;
+            @include center-object;
+            opacity: 0;
+        }
+    }
+
+    &__text-area {
+        border-radius: 2px;
+        background-color: rgba(white, .7);
+        border: none; 
+        font-family: inherit; 
+        color: black;
+        width: 100%; 
+        height: 10rem; 
+        padding: 1.5rem 1rem; 
+    }
+}

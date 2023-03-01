@@ -21,3 +21,37 @@
         clear: both; 
     }
 }
+
+/*
+    MEDIA QUERIES BREAKPOINTS
+
+    Mobile - portrait: 0-576px
+    Tablet - portrait: 577 - 768 
+    Tablet - landscape: 769 - 991
+    High-res laptop or desktop: +1200
+*/
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 26.7em) { //425px = 26.7em 
+            @content;
+        }
+    }
+
+    @if $breakpoint==tab{
+        @media only screen and (max-width: 48em) { //768px = 48em
+            @content;
+        }
+    }
+
+    @if $breakpoint==laptop {
+        @media only screen and (max-width: 64em) { // 1024px = 64em
+            @content;
+        }
+    }
+
+    @if $breakpoint==laptop-l {
+        @media only screen and (min-width: 90rem) { //1440px = 90em 
+            @content;
+        }
+    }
+}

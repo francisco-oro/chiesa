@@ -7,6 +7,17 @@
         text-transform: uppercase;
         letter-spacing: 5rem; 
         display: block;
+        @include respond(tab){
+            font-size: 5rem; 
+            font-weight: 600;
+            letter-spacing: 1rem; 
+        }
+
+        @include respond(phone) {
+            font-size: 4rem; 
+            letter-spacing: .5rem; 
+            margin-bottom: 2rem; 
+        }
     }
 
     &--sub {
@@ -20,7 +31,7 @@
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    background-image: linear-gradient(to right, $primary-light, $secondary-light);
+    background-image: linear-gradient(to right, $primary-light, $secondary-light);  
     -webkit-background-clip: text;
     color: transparent;
     transition: all 1s; 

@@ -1,0 +1,138 @@
+﻿/* The flip card container */
+.flip-card {
+    background-color: transparent;
+    height: 50rem;
+    color: white;
+    perspective: 1000px;
+    /* This container is needed to position the front and back side */
+    &__inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+        box-shadow: 0 1.5rem 4rem rgba($black, .15);
+    }
+    /* Do an horizontal flip when you move the mouse over the flip box container */
+    &:hover &__inner {
+        transform: rotateY(180deg);
+    }
+    /* Position the front and back side */
+    &__front, &__back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+    }
+    /* Style the front side (fallback if image is missing) */
+    &__front {
+        background-color: white;
+        border-radius: 30px 0 30px 0;
+        overflow: hidden;
+    }
+    /* Style the back side */
+    &__back {
+        background-color: $primary-light;
+        transform: rotateY(180deg);
+        border-radius: 0 30px 0 30px;
+
+        &--1 {
+            baackground-color: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $secondary-2, $secondary-2-dark);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $secondary-3, $secondary-3-dark);
+        }
+    }
+
+    &__image {
+        height: 18rem;
+        background-size: cover;
+        background-blend-mode: overlay;
+        clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
+        -webkit-clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark), url(img/pack-img-1.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $secondary-2, $secondary-2-dark), url(img/pack-img-2.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $secondary-3, $secondary-3-dark), url(img/pack-img-3.jpg);
+        }
+    }
+
+    &__heading {
+        color: white;
+        font-weight: 400;
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        position: absolute;
+        top: 9rem;
+        right: 20px;
+        width: 20rem;
+        text-align: right;
+        padding: 1rem 1.5rem;
+
+        &--1 {
+            background-image: linear-gradient(to right bottom, rgba($secondary-1,.7), rgba($secondary-1-dark, .7));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, rgba($secondary-2,.7), rgba($secondary-2-dark, .7));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, rgba($secondary-3,.7), rgba($secondary-3-dark, .7));
+        }
+    }
+
+    &__bullets {
+        padding: 3rem;
+
+        ul {
+            color: $secondary-3-dark;
+            list-style: none;
+            width: 90%;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 1.3rem;
+                padding: 2rem;
+
+                &:not(:last-child) {
+                    border-bottom: 1px solid $grey-dark;
+                }
+            }
+        }
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        @include center-object;
+        width: 90%;
+        text-align: center;
+    }
+
+    &__cost-box {
+        color: white;
+        margin-bottom: 16rem;
+    }
+
+    &__cost-value {
+        font-size: 4.5rem;
+        font-weight: 100;
+    }
+}
+ 
