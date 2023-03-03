@@ -2,35 +2,57 @@
     background-color: $grey-light-1;
     padding: 7rem 0;
     height: 70rem; 
+    @include respond(tab){
+        height: 80rem; 
+    }
+
+    @include respond(phone-s){
+        height: 130rem;
+    }
 }  
 
 .benefits-section {
     background: white;
     padding: 7rem 0; 
-    height: 70rem; 
+    height: 80rem; 
+    @include respond(tab){
+        height: 200rem;
+    }
 }
 
 .testimonials-section{
-    padding: 15rem 0;
     position: relative; 
     height: 81rem;
+    @include respond(phone-s){
+        height: 85rem;
+    }
 }
 
 .services-section {
     padding: 15rem 0;
     background-color: $grey-light-1; 
     height: 80rem; 
+    @include respond(tab){
+        padding: 5rem 0; 
+        height: 230rem;
+    }
 }
 
 .contact-section{
     padding-top: 10rem; 
     background-color: white;
-    height: 70rem; 
+    height: 80rem; 
 }
 
 .footer-section {
     background-color: $secondary-3-dark;
-    padding: 0;
     height: 30rem; 
     z-index: 4; 
+    @include respond(tab){
+        height: 35rem;
+    }
+
+    @include respond(phone){
+        height: 40rem;
+    }
 }

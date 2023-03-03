@@ -3,29 +3,53 @@
     height: 5rem;
     margin: 0 auto;
     margin-top: $vertical-gutter;
-    @include clearfix;
-
+    @include respond(tab){
+        margin-top: $vertical-gutter-small; 
+    }
+    @include respond(tab){
+        max-width: 60rem;
+        text-align: center;
+    }
     [class*="col_"] {
         float: left;
         &:not(:last-child) {
             margin-right: $horizontal-gutter;
+
+            @include respond(tab){
+                margin-right: 0; 
+            }
+        }
+
+        @include respond(tab){
+            width: 100%; 
         }
     }
 
     .col_1_of_2 {
         width: calc((100% - #{$horizontal-gutter})/2);
+        @include respond(tab){
+            width: 100%; 
+        }
     }
 
     .col_1_of_3 {
         width: calc((100% - 2 * #{$horizontal-gutter})/3);
+        @include respond(tab){
+            width: 100%; 
+        }
     }
 
     .col_2_of_3 {
         width: calc(2*((100% - 2 * #{$horizontal-gutter})/3) + #{$horizontal-gutter});
+
     }
 
     .col_1_of_4 {
-        width: calc((100% - 3 * #{$horizontal-gutter})/4);
+        width: calc((95% - 3 * #{$horizontal-gutter})/4);
+        @include respond(tab){
+            width: 95%; 
+        }
+
     }
 
     .col_2_of_4 {

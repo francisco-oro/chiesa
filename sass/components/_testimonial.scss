@@ -5,6 +5,10 @@
     display: inline-block;
     border-radius: 2rem; 
     overflow: hidden; 
+
+    @include respond(tab){
+        width: 90%; 
+    }
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -18,6 +22,10 @@
         height: 100%;
         transform:scale(1.7);
         transition: all .5s; 
+        @include respond(tab){
+            transform: scale(1.4);
+            filter: blur(3px) brightness(80%);
+        }
     }
 
     &:hover &__image {
@@ -43,6 +51,10 @@
         font-size: 1.7rem;
         opacity: 0;
         transition: all .5s;
+        @include respond(tab){
+            opacity: 1;
+            transform: translate(-60%, -80%);
+        }
     }
 
     &:hover &__caption{
@@ -54,12 +66,29 @@
         float: left;
         margin-left: 5rem;  
         margin-top: 5rem; 
+        @include respond(tab){
+            margin-top: 8rem; 
+            margin-left: 0;
+            float: none;
+        }
+
+        @include respond(phone){
+            margin-top: 1rem;
+        }
     }
 
     &--2 {
         float: right;
         margin-top: 20rem; 
         margin-right: 5rem; 
+        @include respond(tab){
+            margin-right: 0;
+            float: none; 
+            margin-top: 8rem; 
+        }
+        @include respond(phone){
+            margin-top: 1rem;
+        }
     }
 
     @include clearfix;

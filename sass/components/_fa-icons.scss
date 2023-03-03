@@ -1,0 +1,26 @@
+.fa-facebook:hover,
+.fa-facebook:active {
+    color: #3b5998;
+}
+
+.fa-twitter:hover,
+.fa-twitter:active {
+    color: #55acee;
+}
+
+.fa-whatsapp:hover, 
+.fa-whatsapp:active{
+    color: #075e54;
+}
+
+.fa-instagram:hover,
+.fa-instagram:active {
+    color: #517fa4;
+}
+
+.fa-facebook,
+.fa-instagram,
+.fa-twitter,
+.fa-whatsapp {
+    transition: color 0.2s; 
+}

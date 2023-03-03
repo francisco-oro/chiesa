@@ -4,6 +4,14 @@
     height: 50rem;
     color: white;
     perspective: 1000px;
+    @include respond(tab){
+        height: 70rem;
+        background-color: white;
+        margin-bottom: 1.5rem;
+    }
+    @include respond(phone-s){
+        margin-bottom: 3rem;
+    }
     /* This container is needed to position the front and back side */
     &__inner {
         position: relative;
@@ -12,11 +20,20 @@
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
+        border-radius: 30px 0 30px 0;
         box-shadow: 0 1.5rem 4rem rgba($black, .15);
+        @include respond(tab){
+            height: 60rem; 
+            position: relative;
+            box-shadow: none;
+        }
     }
     /* Do an horizontal flip when you move the mouse over the flip box container */
     &:hover &__inner {
         transform: rotateY(180deg);
+        @include respond(tab){
+            transform: rotateY(0deg);
+        }
     }
     /* Position the front and back side */
     &__front, &__back {
@@ -31,15 +48,27 @@
         background-color: white;
         border-radius: 30px 0 30px 0;
         overflow: hidden;
+        @include respond(tab){
+            border-radius: 0;
+            position: relative;
+            height: auto;
+        }
     }
     /* Style the back side */
     &__back {
         background-color: $primary-light;
         transform: rotateY(180deg);
         border-radius: 0 30px 0 30px;
-
+        @include respond(tab){
+            height: auto;
+            position: relative;
+            border-radius: 0;
+            transform: rotateY(0deg);
+            clip-path: polygon(0 15%,100% 0, 100% 100%, 0 100%);
+            -webkit-clip-path: polygon(0 15%,100% 0, 100% 100%, 0 100%);
+        }
         &--1 {
-            baackground-color: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark);
+            background-color: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark);
         }
 
         &--2 {
@@ -123,11 +152,22 @@
         @include center-object;
         width: 90%;
         text-align: center;
+        @include respond(tab){
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0 , 0);
+            width: 100%;
+            padding: 4rem;
+        }
     }
 
     &__cost-box {
         color: white;
         margin-bottom: 16rem;
+        @include respond(tab){
+            margin-bottom: 3rem;
+        }
     }
 
     &__cost-value {

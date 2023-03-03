@@ -34,7 +34,11 @@
     }
 
     &__logo {
-        height: 29rem;
+        height: 10rem;
+        border-radius: 4rem;
+        @include respond(phone){
+            height: 8rem;
+        }
     }
 
     &__text-box {

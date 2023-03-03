@@ -5,11 +5,21 @@
     background-position: left 50%;
     border-radius: 3rem;
     box-shadow: 0 1.5rem 4rem rgba($black, .2);
-
+    @include respond(tab){
+        background-image: radial-gradient(circle closest-corner at 65% 50%, rgba($secondary-2-dark, .4), rgba($secondary-2-dark, .4) , rgba($secondary-2-dark, .4) 50%), url(img/contact-form-image.jpg);
+        background-size: cover;
+    }
     &__form{
         padding: 6rem; 
+        @include respond(tab){
+            width: 100%;
+            text-align: center;
+            padding: 3rem; 
+        }
+        @include respond(phone){
+            padding: 1.5rem;
+        }
     }
-
 }
 
 //Closest corner 

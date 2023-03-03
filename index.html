@@ -17,12 +17,36 @@
 </head>
 
 <body>
+    <nav>
+        <ul id="menu">
+            <a href="#home"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#services"><li>Services</li></a>
+            <a href="#benefits"><li>Benefits</li></a>
+            <a href="#contact"><li>Contact</li></a>
+        </ul>
+    </nav>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <a href="#home"><li>Home</li></a>
+                <a href="#about"><li>About</li></a>
+                <a href="#services"><li>Services</li></a>
+                <a href="#benefits"><li>Benefits</li></a>
+                <a href="#contact"><li>Contact</li></a>
+              </ul>
+        </div>
+    </nav>
     <header class="header" id="home">
         <div class="header__slider--1"></div>
         <div class="header__slider--2"></div>
         <div class="header__slider--3"></div>
         <div class="header__slider--4"></div>
-        <div class="menu u-padding-top-medium">
+        <!-- <div class="menu u-padding-top-medium">
             <div class="menu__item menu__item--current">
                 <a class="menu__item-text" href="#home">Home</a>
                 <div class="menu__slider"></div>
@@ -39,13 +63,13 @@
             <div class="menu__item">
                 <a class="menu__item-text" href="#contact">Contact  </a>
             </div>
-        </div>
+        </div> -->
         <div class="header__logo-box">
             <img src="img/chiesa-logo.png" alt="chiesa logo" class="header__logo" />
         </div>
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Christmas light installation</span>
+                <span class="heading-primary--main">Christmas lights installation</span>
                 <span class="heading-primary--sub">Save time and money, and maximize the visual interest for your house</span>
             </h1>
         </div>
@@ -140,7 +164,7 @@
         </div>
     </div>
 
-    <div class="testimonials-section">
+    <div class="testimonials-section u-padding-top-medium">
         <div class="u-align-center">
             <h2 class="heading-secondary">Stories from Chiesa members</h2>
         </div>
@@ -305,48 +329,37 @@
             </div>
         </div>
     </section>
-    <div class="footer-section u-padding-top-medium">
-        <div class="row">
-            <div class="col_1_of_2">
-                <ul class="footer__nav">
-                    <li>
-                        <a href="">About Us</a>
-                    </li>
-                    <li>
-                        <a href="">Blog</a>
-                    </li>
-                    <li>
-                        <a href="">Help & Support</a>
-                    </li>
-                    <li>
-                        <a href="">Andriod app</a>
-                    </li>
-                    <li>
-                        <a href="">IOS app</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="col_1_of_2">
-                <ul class="footer__icons">
-                    <li>
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </li>
-                </ul>
+
+      
+    <footer class="footer footer-section">
+        <div class="footer__group">
+            <div class="row">
+                <div class="col_1_of_2">
+                    <img src="img/chiesa-logo.png" class="footer__img">
+                </div>
+                <div class="col_1_of_4">
+                    <ul class="footer__links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy policy</a></li>                        
+                        <li><a href="#">Sitemap</a></li>                    
+                    </ul>
+                </div>
+                <div class="col_1_of_4">
+                    <ul class="footer__icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <p class="footer__para">This webpage has been created by Francisco Oro on February 2023</p>
+        <div class="footer__group">
+            <p class="footer__text">This page was created by Francisco Oro on March 2023</p>
         </div>
-    </div>
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>

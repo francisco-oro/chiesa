@@ -11,6 +11,9 @@
         font-family: inherit;
         opacity: 1;
         border-bottom: 3px solid transparent;
+        @include respond(tab){
+            width: 100%;
+        }
 
         &:focus {
             box-shadow: 0 1rem 2rem, rgba($black, .1);
@@ -44,6 +47,12 @@
     &__radio-group {
         display: inline-block;
         width: 13%;
+        @include respond(tab){
+            width: 26%;
+        }
+        @include respond(phone){
+            width: 30%;
+        }
     }
 
     &__radio-input:checked + &__radio-label &__radio-button:after {
@@ -61,18 +70,24 @@
         cursor: pointer;
         padding-left: 5rem;
         position: relative;
+        @include respond(phone){
+            padding-left: 3rem;
+        }
     }
 
     &__radio-button {
         height: 3rem;
         width: 3rem;
         border-radius: 50%;
-        background-image: url(img/golden-frame-texture-small.jpg);
+        background-image: url(img/1176-small.jpg);
         display: inline-block;
         position: absolute;
         top: 0;
         left: 0;
-
+        @include respond(phone){
+            height: 2rem;
+            width: 2rem;
+        }
         &:after {
             content: "";
             display: block;

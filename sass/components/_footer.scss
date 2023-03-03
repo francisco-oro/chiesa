@@ -1,34 +1,90 @@
 ﻿.footer {
-    &__para {
-        text-align: center;
-        font-size: 2rem;
-        padding-top: 3rem;
+    position: relative;
+    background-color: gray;
+    height:auto;
+    &__group{
+        padding-top: .8rem; 
+        @include respond(phone){
+            margin: 0 1rem;
+        }
     }
 
-    &__nav {
-        font-size: 1.5rem;
-        width: 30%; 
-        text-align: center; 
-        & li {
-            border-left: 3px solid white; 
-            list-style: none; 
-            padding: .5rem 0; 
-            left: 50%; 
-            & a {
-                text-decoration: none;
-                color: white;
+    &__img{
+        border-radius: 3rem;
+        display: inline-block;
+        position:relative; 
+        margin-top: 5rem;
+        @include center-object;
+        @include respond(tab){
+            margin-top: 2rem;
+            position: absolute;
+        }
+    }
+
+    &__links {
+        border-left: 2px solid white;
+        list-style: none;
+        padding-left: 2rem;
+        display: inline-block;
+        @include respond(tab){
+            position: relative;
+            float:left;
+            margin-top: 10rem;
+        }
+        @include respond(phone){
+            border-left: 0;
+        }
+        & a{
+            text-decoration: none;
+            color:white; 
+            font-size: 1.5rem; 
+            &:hover {
+                color: $secondary-2-dark; 
             }
         }
     }
 
     &__icons {
-        padding-left: 2rem;
-        font-size: 3rem; 
+        border-left: 2px solid white;
+        list-style: none;
+        padding-left: 2rem; 
+        position: absolute;
+        @include respond(tab){
+            position: relative;
+            float: right;
+            margin-top: -10rem;
+            padding-bottom: 3rem;
+        }
+        @include respond(phone){
+            border-left: 0;
+        }
         & li {
-            list-style: none; 
-            & a {
-                color: white; 
+            @include respond(tab){
+                display: inline-block;
+                padding: 4rem 0 0 3rem; 
             }
+        }
+        & a{
+            text-decoration: none;
+            color:white; 
+            font-size: 2rem; 
+
+            &:hover {
+                color: $secondary-2-dark; 
+            }
+        }
+    }
+
+    &__text {
+        margin-top:10rem;
+        font-size: 2.2rem;
+        position: relative; 
+        @include center-object; 
+        @include respond(tab){
+            margin-top: 20rem;
+        }
+        @include respond(phone){
+            margin: 20rem 1rem 0 1rem; 
         }
     }
 }

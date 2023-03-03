@@ -18,6 +18,12 @@
             letter-spacing: .5rem; 
             margin-bottom: 2rem; 
         }
+
+        @include respond(phone-s){
+            font-size: 3rem;
+            letter-spacing: .25rem;
+            margin-bottom: 1rem;
+        }
     }
 
     &--sub {
