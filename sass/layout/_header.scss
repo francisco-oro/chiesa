@@ -1,30 +1,39 @@
 ﻿.header {
-    height: 95vh;
+    height: 95vh; 
     position: relative;
     padding: 0;
-
+    @include respond(tab-l){
+        height: 80rem; 
+    }
     &__slider--1 {
         @include slider-style;
         background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-1.jpg);
-        animation: fade1 10s infinite;
+        animation: fade1 15s infinite;
     }
 
     &__slider--2 {
         @include slider-style;
         background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-2.jpg);
-        animation: fade2 10s infinite;
-    }
+        animation: fade2 15s infinite;
+    }   
 
     &__slider--3 {
         @include slider-style;
         background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-3.jpg);
-        animation: fade3 10s infinite;
+        animation: fade3 15s infinite;
     }
 
     &__slider--4 {
         @include slider-style;
         background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-4.jpg);
-        animation: fade4 10s infinite;
+        animation: fade4 15s infinite;
+    }
+
+    
+    &__slider--5 {
+        @include slider-style;
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-5.jpg);
+        animation: fade5 15s infinite;
     }
 
     &__logo-box {
@@ -37,7 +46,7 @@
         height: 10rem;
         border-radius: 4rem;
         @include respond(phone){
-            height: 8rem;
+            height: 6rem;
         }
     }
 

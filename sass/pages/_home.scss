@@ -24,8 +24,9 @@
     position: relative; 
     height: 81rem;
     @include respond(phone-s){
-        height: 85rem;
+        height: 90rem;
     }
+    
 }
 
 .services-section {

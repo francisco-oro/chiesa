@@ -48,6 +48,12 @@
         }
     }
 
+    @if $breakpoint==tab-l{
+        @media only screen and (max-width: 58em) { //928px = 57em
+            @content;
+        }
+    }
+
     @if $breakpoint==laptop {
         @media only screen and (max-width: 64em) { // 1024px = 64em
             @content;
@@ -55,7 +61,7 @@
     }
 
     @if $breakpoint==laptop-l {
-        @media only screen and (min-width: 90rem) { //1440px = 90em 
+        @media only screen and (min-width: 90em) { //1440px = 90em 
             @content;
         }
     }

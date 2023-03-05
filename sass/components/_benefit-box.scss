@@ -5,7 +5,9 @@
     height: 40rem;
     color: white;
     position: relative;
-
+    @include respond(laptop){
+        width: 120%;
+    }
     @include respond(tab){
         width: 50rem; 
         margin: 1.5rem;
@@ -63,6 +65,9 @@
         @include center-object;
         opacity: .7;
         transition: opacity .2s; 
+        @include respond(laptop){
+            font-size: 2rem;
+        }
         @include respond(tab){
             opacity: 0;
         }
@@ -76,6 +81,9 @@
         width: 28rem;
         height: 40rem;
         transition: background-image .2s; 
+        @include respond(laptop){
+            width: 100%;
+        }
         @include respond(tab){
             width: 100%; 
             opacity: 1;

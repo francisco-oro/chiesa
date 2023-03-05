@@ -15,7 +15,7 @@
 
 html {
   font-size: 62.5%; }
-  @media only screen and (min-width: 90rem) {
+  @media only screen and (min-width: 90em) {
     html {
       font-size: 75%; } }
   @media only screen and (max-width: 64em) {
@@ -41,11 +41,13 @@ body {
 @keyframes fade1 {
   0% {
     opacity: 1; }
-  25% {
+  20% {
     opacity: 0; }
-  50% {
+  40% {
     opacity: 0; }
-  75% {
+  60% {
+    opacity: 0; }
+  80% {
     opacity: 0; }
   100% {
     opacity: 1; } }
@@ -53,11 +55,13 @@ body {
 @keyframes fade2 {
   0% {
     opacity: 0; }
-  25% {
+  20% {
     opacity: 1; }
-  50% {
+  40% {
     opacity: 0; }
-  75% {
+  60% {
+    opacity: 0; }
+  80% {
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -65,11 +69,13 @@ body {
 @keyframes fade3 {
   0% {
     opacity: 0; }
-  25% {
+  20% {
     opacity: 0; }
-  50% {
+  40% {
     opacity: 1; }
-  75% {
+  60% {
+    opacity: 0; }
+  80% {
     opacity: 0; }
   100% {
     opacity: 0; } }
@@ -77,11 +83,27 @@ body {
 @keyframes fade4 {
   0% {
     opacity: 0; }
-  25% {
+  20% {
     opacity: 0; }
-  50% {
+  40% {
     opacity: 0; }
-  75% {
+  60% {
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes fade5 {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 0; }
+  40% {
+    opacity: 0; }
+  60% {
+    opacity: 0; }
+  80% {
     opacity: 1; }
   100% {
     opacity: 0; } }
@@ -93,8 +115,13 @@ body {
   .heading-primary--main {
     font-size: 7rem;
     text-transform: uppercase;
-    letter-spacing: 5rem;
+    letter-spacing: 4rem;
     display: block; }
+    @media only screen and (max-width: 64em) {
+      .heading-primary--main {
+        font-size: 6rem;
+        letter-spacing: 2.5rem;
+        font-weight: 400; } }
     @media only screen and (max-width: 48em) {
       .heading-primary--main {
         font-size: 5rem;
@@ -382,6 +409,9 @@ body {
   height: 40rem;
   color: white;
   position: relative; }
+  @media only screen and (max-width: 64em) {
+    .benefit-box {
+      width: 120%; } }
   @media only screen and (max-width: 48em) {
     .benefit-box {
       width: 50rem;
@@ -432,6 +462,9 @@ body {
     text-align: center;
     opacity: .7;
     transition: opacity .2s; }
+    @media only screen and (max-width: 64em) {
+      .benefit-box__title {
+        font-size: 2rem; } }
     @media only screen and (max-width: 48em) {
       .benefit-box__title {
         opacity: 0; } }
@@ -442,6 +475,9 @@ body {
     width: 28rem;
     height: 40rem;
     transition: background-image .2s; }
+    @media only screen and (max-width: 64em) {
+      .benefit-box__overlay {
+        width: 100%; } }
     @media only screen and (max-width: 48em) {
       .benefit-box__overlay {
         width: 100%;
@@ -483,10 +519,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  width: 100%; }
-  @media only screen and (max-width: 48em) {
-    .bg-video {
-      height: 100%; } }
+  width: 100%;
+  height: 100%; }
   .bg-video__content {
     width: 100%;
     height: 100%;
@@ -968,7 +1002,7 @@ body {
   height: 81rem; }
   @media only screen and (max-width: 20em) {
     .testimonials-section {
-      height: 85rem; } }
+      height: 90rem; } }
 
 .services-section {
   padding: 15rem 0;
@@ -999,6 +1033,9 @@ body {
   height: 95vh;
   position: relative;
   padding: 0; }
+  @media only screen and (max-width: 58em) {
+    .header {
+      height: 80rem; } }
   .header__slider--1 {
     position: absolute;
     top: 0;
@@ -1008,7 +1045,7 @@ body {
     background-position: top;
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-1.jpg);
-    animation: fade1 10s infinite; }
+    animation: fade1 15s infinite; }
   .header__slider--2 {
     position: absolute;
     top: 0;
@@ -1018,7 +1055,7 @@ body {
     background-position: top;
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-2.jpg);
-    animation: fade2 10s infinite; }
+    animation: fade2 15s infinite; }
   .header__slider--3 {
     position: absolute;
     top: 0;
@@ -1028,7 +1065,7 @@ body {
     background-position: top;
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-3.jpg);
-    animation: fade3 10s infinite; }
+    animation: fade3 15s infinite; }
   .header__slider--4 {
     position: absolute;
     top: 0;
@@ -1038,7 +1075,17 @@ body {
     background-position: top;
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-4.jpg);
-    animation: fade4 10s infinite; }
+    animation: fade4 15s infinite; }
+  .header__slider--5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-5.jpg);
+    animation: fade5 15s infinite; }
   .header__logo-box {
     position: absolute;
     top: 25%;
@@ -1050,7 +1097,7 @@ body {
     border-radius: 4rem; }
     @media only screen and (max-width: 26.7em) {
       .header__logo {
-        height: 8rem; } }
+        height: 6rem; } }
   .header__text-box {
     position: absolute;
     top: 60%;

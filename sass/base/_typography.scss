@@ -5,8 +5,13 @@
     &--main {
         font-size: 7rem;
         text-transform: uppercase;
-        letter-spacing: 5rem; 
+        letter-spacing: 4rem; 
         display: block;
+        @include respond(laptop){
+            font-size: 6rem;
+            letter-spacing: 2.5rem;
+            font-weight: 400;
+        }
         @include respond(tab){
             font-size: 5rem; 
             font-weight: 600;
