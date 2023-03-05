@@ -83,20 +83,33 @@
     &__image {
         height: 18rem;
         background-size: cover;
-        background-blend-mode: overlay;
+
+        @supports (background-blend-mode: overlay){
+            background-blend-mode: overlay;
+        }
+
         clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
         -webkit-clip-path: polygon(0 0,100% 0, 100% 80%, 0 100%);
 
         &--1 {
-            background-image: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark), url(img/pack-img-1.jpg);
+            background-image: linear-gradient(to right bottom, rgba($secondary-1, .5), rgba($secondary-1-dark),.5), url(img/pack-img-1.jpg);
+            @supports (background-blend-mode: overlay){
+            background-image: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark), url(img/pack-img-1.jpg);            
+            }
         }
 
         &--2 {
-            background-image: linear-gradient(to right bottom, $secondary-2, $secondary-2-dark), url(img/pack-img-2.jpg);
+            background-image: linear-gradient(to right bottom, rgba($secondary-1, .5), rgba($secondary-1-dark),.5), url(img/pack-img-2.jpg);
+            @supports (background-blend-mode: overlay){
+            background-image: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark), url(img/pack-img-2.jpg);            
+            }
         }
 
         &--3 {
-            background-image: linear-gradient(to right bottom, $secondary-3, $secondary-3-dark), url(img/pack-img-3.jpg);
+            background-image: linear-gradient(to right bottom, rgba($secondary-1, .5), rgba($secondary-1-dark),.5), url(img/pack-img-3.jpg);
+            @supports (background-blend-mode: overlay){
+            background-image: linear-gradient(to right bottom, $secondary-1, $secondary-1-dark), url(img/pack-img-3.jpg);            
+            }
         }
     }
 
