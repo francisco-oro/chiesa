@@ -764,8 +764,11 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
   @media only screen and (max-width: 48em) {
     .contact {
-      background-image: radial-gradient(circle closest-corner at 65% 50%, rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4) 50%), url(img/contact-form-image.jpg);
+      background-image: radial-gradient(circle closest-corner at 65% 50%, rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4) 50%), url(img/contact-form-image-small.jpg);
       background-size: cover; } }
+  @media only screen and (max-width: 48em) and (min-resolution: 192dpi) and (min-width: 36em), only screen and (max-width: 48em) and (min-width: 125em) {
+    .contact {
+      background-image: radial-gradient(circle closest-corner at 65% 50%, rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4), rgba(153, 10, 10, 0.4) 50%), url(img/contact-form-image.jpg); } }
   .contact__form {
     padding: 6rem; }
     @media only screen and (max-width: 48em) {
@@ -1044,8 +1047,11 @@ body {
     height: 100%;
     background-position: top;
     background-size: cover;
-    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-1.jpg);
+    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-1-small.jpg);
     animation: fade1 15s infinite; }
+    @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 125em) {
+      .header__slider--1 {
+        background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(img/header-image-1.jpg); } }
   .header__slider--2 {
     position: absolute;
     top: 0;
@@ -1054,8 +1060,11 @@ body {
     height: 100%;
     background-position: top;
     background-size: cover;
-    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-2.jpg);
+    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-2-small.jpg);
     animation: fade2 15s infinite; }
+    @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 125em) {
+      .header__slider--2 {
+        background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(img/header-image-2.jpg); } }
   .header__slider--3 {
     position: absolute;
     top: 0;
@@ -1064,8 +1073,11 @@ body {
     height: 100%;
     background-position: top;
     background-size: cover;
-    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-3.jpg);
+    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-3-small.jpg);
     animation: fade3 15s infinite; }
+    @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 125em) {
+      .header__slider--3 {
+        background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(img/header-image-3.jpg); } }
   .header__slider--4 {
     position: absolute;
     top: 0;
@@ -1074,8 +1086,11 @@ body {
     height: 100%;
     background-position: top;
     background-size: cover;
-    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-4.jpg);
+    background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-4-small.jpg);
     animation: fade4 15s infinite; }
+    @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 125em) {
+      .header__slider--4 {
+        background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(img/header-image-4.jpg); } }
   .header__slider--5 {
     position: absolute;
     top: 0;
@@ -1086,6 +1101,9 @@ body {
     background-size: cover;
     background-image: linear-gradient(to right bottom, rgba(122, 42, 42, 0.5), rgba(91, 31, 31, 0.5)), url(img/header-image-5.jpg);
     animation: fade5 15s infinite; }
+    @media (min-resolution: 192dpi) and (min-width: 36em), (min-width: 125em) {
+      .header__slider--5 {
+        background-image: linear-gradient(to right bottom, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0.5)), url(img/header-image-5.jpg); } }
   .header__logo-box {
     position: absolute;
     top: 25%;

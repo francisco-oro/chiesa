@@ -7,26 +7,46 @@
     }
     &__slider--1 {
         @include slider-style;
-        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-1.jpg);
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-1-small.jpg);
         animation: fade1 15s infinite;
+
+        @media (min-resolution:192dpi) and (min-width:36em),
+		(min-width:125em) {
+			background-image:linear-gradient(to right bottom, rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url(img/header-image-1.jpg);
+		}
     }
 
     &__slider--2 {
         @include slider-style;
-        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-2.jpg);
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-2-small.jpg);
         animation: fade2 15s infinite;
+
+        @media (min-resolution:192dpi) and (min-width:36em),
+		(min-width:125em) {
+			background-image:linear-gradient(to right bottom, rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url(img/header-image-2.jpg);
+		}
     }   
 
     &__slider--3 {
         @include slider-style;
-        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-3.jpg);
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-3-small.jpg);
         animation: fade3 15s infinite;
+
+        @media (min-resolution:192dpi) and (min-width:36em),
+		(min-width:125em) {
+			background-image:linear-gradient(to right bottom, rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url(img/header-image-3.jpg);
+		}
     }
 
     &__slider--4 {
         @include slider-style;
-        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-4.jpg);
+        background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-4-small.jpg);
         animation: fade4 15s infinite;
+
+        @media (min-resolution:192dpi) and (min-width:36em),
+		(min-width:125em) {
+			background-image:linear-gradient(to right bottom, rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url(img/header-image-4.jpg);
+		}
     }
 
     
@@ -34,6 +54,11 @@
         @include slider-style;
         background-image: linear-gradient(to right bottom, rgba($primary-light, 0.5), rgba($primary-dark, 0.5)), url(img/header-image-5.jpg);
         animation: fade5 15s infinite;
+
+        @media (min-resolution:192dpi) and (min-width:36em),
+		(min-width:125em) {
+			background-image:linear-gradient(to right bottom, rgba(255,0,0,0.5), rgba(255,0,0,0.5)), url(img/header-image-5.jpg);
+		}
     }
 
     &__logo-box {
